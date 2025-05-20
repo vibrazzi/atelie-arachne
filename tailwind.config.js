@@ -17,6 +17,14 @@ module.exports = {
       backgroundImage: {
         'navbar-bg': "url('/assets/capa-spider.avif')",
       },
+      spacing: {
+        xs: "0.5rem",
+        sm: "1rem",
+        md: "1.5rem",
+        lg: "2rem",
+        xl: "3rem",
+        "2xl": "4rem",
+      },
     },
   },
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],

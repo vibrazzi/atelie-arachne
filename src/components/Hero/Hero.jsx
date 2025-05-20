@@ -28,13 +28,13 @@ const SLIDES = [
 ];
 
 const HeroSlide = ({ img, title, description }) => (
-  <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-8 py-6 sm:py-12">
+  <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-8 py-6 sm:py-12 bg-white/60 rounded-xl shadow-lg">
     <div className="flex flex-col justify-center gap-4 sm:gap-8 text-center sm:text-left order-2 sm:order-1 relative z-10">
       <h1
         data-aos="zoom-out"
         data-aos-duration="500"
         data-aos-once="true"
-        className="text-3xl sm:text-5xl lg:text-6xl font-bold text-light"
+        className="text-3xl sm:text-5xl lg:text-6xl font-bold text-light drop-shadow-lg"
       >
         {title}
       </h1>
@@ -56,7 +56,7 @@ const HeroSlide = ({ img, title, description }) => (
         <img
           src={img}
           alt={title}
-          className="w-[180px] h-[180px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] object-contain"
+          className="w-[180px] h-[180px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] object-contain mx-auto rounded-xl border-4 border-red-200 shadow-2xl transition-transform duration-300 hover:scale-105"
         />
       </div>
     </div>
@@ -78,9 +78,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="flex justify-center relative overflow-hidden min-h-[550px] sm:min-h-[650px] text-light duration-200">
-      <div className="h-[700px] w-[700px] absolute -top-1/2 right-0 rounded-3xl rotate-45 -z-[8]" />
-      <div className="container px-2 sm:px-8 bg-gradient-to-br from-[#F5F5F5] via-white to-[#F5F5F5]/80 rounded-2xl">
+    <section className="flex justify-center relative overflow-hidden min-h-[300px] sm:min-h-[400px] text-light duration-200">
+      <div className="h-[400px] w-[400px] absolute -top-1/3 right-0 rounded-3xl rotate-45 -z-[8]" />
+      <div className="container px-1 sm:px-4 bg-gradient-to-br from-[#F5F5F5] via-white to-[#F5F5F5]/80 rounded-2xl">
         <Slider {...settings}>
           {SLIDES.map((slide) => (
             <HeroSlide key={slide.id} {...slide} />

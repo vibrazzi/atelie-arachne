@@ -16,11 +16,11 @@ const SOCIAL_LINKS = [
 ];
 
 const Footer = () => (
-  <footer className="text-light py-6 sm:py-10 bg-gradient-to-br from-[#F5F5F5] via-white to-[#F5F5F5]/80 rounded-t-2xl">
+  <footer className="text-light py-6 sm:py-10 bg-gradient-to-br from-red-100 via-white to-pink-100 rounded-t-2xl shadow-lg">
     <div className="container flex flex-col items-center sm:gap-8">
-      <h1 className="text-lg font-bold flex items-center gap-2">
+      <h1 className="text-lg font-bold flex items-center gap-2 text-black-900 drop-shadow">
         Faça seus pedidos aqui
-        <FaSpider className="text-2xl text-purple-500" />
+        <FaSpider className="text-2xl text-purple-500 animate-spin-slow" />
       </h1>
       <div className="flex sm:flex-row items-center gap-4 sm:gap-6">
         {SOCIAL_LINKS.map(({ href, label, icon: Icon, hover }) => (
@@ -29,7 +29,7 @@ const Footer = () => (
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center gap-2 text-light transition duration-300 ${hover}`}
+            className={`flex items-center gap-2 text-light transition duration-300 ${hover} hover:scale-110`}
           >
             <Icon className="text-2xl" />
             <span>{label}</span>

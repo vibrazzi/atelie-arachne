@@ -17,15 +17,15 @@ const PRODUCTS = [
 const ProductCard = ({ img, title }) => (
   <div
     data-aos="fade-up"
-    className="space-y-3 text-center bg-white/80 rounded-lg p-4 shadow-md"
+    className="space-y-3 text-center bg-white/80 rounded-lg p-4 shadow-md border-2 border-purple-100 hover:border-purple-400 hover:shadow-xl transition-all duration-300 cursor-pointer"
   >
     <img
       src={img}
       alt={title}
-      className="h-[220px] w-[250px] object-cover rounded-md"
+      className="h-[220px] w-[250px] object-cover rounded-md mx-auto"
     />
     <div>
-      <h3 className="font-semibold">{title}</h3>
+      <h3 className="font-semibold text-purple-900 text-lg">{title}</h3>
       <div className="flex justify-center items-center gap-1">
         {Array.from({ length: 5 }).map((_, idx) => (
           <FaSpider key={idx} style={{ color: "#800080" }} />
