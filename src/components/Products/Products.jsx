@@ -17,7 +17,7 @@ const PRODUCTS = [
 const ProductCard = ({ img, title }) => (
   <div
     data-aos="fade-up"
-    className="space-y-3 text-center bg-white/80 rounded-lg p-4 shadow-md border-2 border-purple-100 hover:border-purple-400 hover:shadow-xl transition-all duration-300 cursor-pointer"
+    className="space-y-3 text-center bg-white/80 rounded-lg p-4 shadow-md border-2 border-red-100 hover:border-pink-400 hover:shadow-xl transition-all duration-300 cursor-pointer"
   >
     <img
       src={img}
@@ -25,7 +25,7 @@ const ProductCard = ({ img, title }) => (
       className="h-[220px] w-[250px] object-cover rounded-md mx-auto"
     />
     <div>
-      <h3 className="font-semibold text-purple-900 text-lg">{title}</h3>
+      <h3 className="font-semibold text-black-900 text-lg">{title}</h3>
       <div className="flex justify-center items-center gap-1">
         {Array.from({ length: 5 }).map((_, idx) => (
           <FaSpider key={idx} style={{ color: "#800080" }} />
@@ -36,7 +36,7 @@ const ProductCard = ({ img, title }) => (
 );
 
 const Products = () => (
-  <section className="flex justify-center px-2 sm:px-8 bg-gradient-to-br from-[#e2caca] via-white to-[#F5F5F5]/80 rounded-2xl mx-4 sm:mx-10 mb-10 py-2 sm:py-8">
+  <section className="flex justify-center px-2 sm:px-8 bg-gradient-to-br from-[pink] via-white to-[pink]/80 rounded-2xl mx-4 sm:mx-10 mb-10 py-2 sm:py-8">
     <div className="container">
       <div className="text-center max-w-[600px] mx-auto">
         <h1 data-aos="fade-up" className="text-3xl font-bold">
