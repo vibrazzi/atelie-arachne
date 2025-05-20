@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -21,16 +21,12 @@ const App = () => {
 
   return (
     <div
-      className=" text-light duration-200"
+      className="text-light duration-200"
       style={{
-        backgroundImage: "url('/background-chat.png')", // Certifique-se de que a imagem está no diretório public
+        backgroundImage: "url('/background-chat.png')",
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
-        backgroundColor: "rgba(0, 0, 0, 0.1)", // Cor de fundo com opacidade
-
-  //         background-repeat: no-repeat;
-  // background-position: center;
-
+        backgroundColor: "rgba(0, 0, 0, 0.1)",
       }}
     >
       <Navbar />

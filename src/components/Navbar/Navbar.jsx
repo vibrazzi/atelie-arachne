@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Menu = [
+const MENU_ITEMS = [
   { id: 1, name: "Início", link: "#home" },
   { id: 2, name: "Chaveirinhos", link: "#products" },
   { id: 3, name: "Contato", link: "#footer" },
@@ -27,12 +27,12 @@ const Navbar = () => {
     >
       <div className="w-full flex flex-col items-center justify-center mx-auto py-2" style={{ maxWidth: "20rem" }}>
         <img
-          className="w-32 h-32 mx-auto mt-0"
-          src={"./spider-web-sf.png"}
+          className="w-32 h-32 mx-auto"
+          src="./spider-web-sf.png"
           alt="Teia de aranha"
         />
         <ul className="flex flex-wrap gap-4 text-black text-sm justify-center w-full">
-          {Menu.map(({ id, name, link }) => (
+          {MENU_ITEMS.map(({ id, name, link }) => (
             <li key={id}>
               <button
                 onClick={() => handleMenuClick(link)}

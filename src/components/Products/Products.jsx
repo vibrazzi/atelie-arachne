@@ -6,7 +6,7 @@ import Img3 from "../../assets/hero/collection6.jpg";
 import Img4 from "../../assets/hero/collection2.jpg";
 import Img5 from "../../assets/hero/collection.jpg";
 
-const ProductsData = [
+const PRODUCTS = [
   { id: 1, img: Img1, title: "Chaveirinho Ceva" },
   { id: 2, img: Img2, title: "Chaveirinho Hamburguer" },
   { id: 3, img: Img3, title: "Chaveirinho Estrela" },
@@ -14,8 +14,29 @@ const ProductsData = [
   { id: 5, img: Img5, title: "Chaveirinho Coelhinho" },
 ];
 
+const ProductCard = ({ img, title }) => (
+  <div
+    data-aos="fade-up"
+    className="space-y-3 text-center bg-white/80 rounded-lg p-4 shadow-md"
+  >
+    <img
+      src={img}
+      alt={title}
+      className="h-[220px] w-[250px] object-cover rounded-md"
+    />
+    <div>
+      <h3 className="font-semibold">{title}</h3>
+      <div className="flex justify-center items-center gap-1">
+        {Array.from({ length: 5 }).map((_, idx) => (
+          <FaSpider key={idx} style={{ color: "#800080" }} />
+        ))}
+      </div>
+    </div>
+  </div>
+);
+
 const Products = () => (
-  <div className="flex justify-center px-2 sm:px-8 bg-gradient-to-br from-[#e2caca] via-white to-[#F5F5F5]/80 rounded-2xl ml-20 mr-20 mb-10 py-2 sm:py-8">
+  <section className="flex justify-center px-2 sm:px-8 bg-gradient-to-br from-[#e2caca] via-white to-[#F5F5F5]/80 rounded-2xl mx-4 sm:mx-10 mb-10 py-2 sm:py-8">
     <div className="container">
       <div className="text-center max-w-[600px] mx-auto">
         <h1 data-aos="fade-up" className="text-3xl font-bold">
@@ -23,32 +44,12 @@ const Products = () => (
         </h1>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center p-10 gap-5">
-        {ProductsData.map(({ id, img, title }) => (
-          <div
-            key={id}
-            data-aos="fade-up"
-            className="space-y-3 text-center bg-white/80 rounded-lg p-4 shadow-md"
-          >
-            <img
-              src={img}
-              alt={title}
-              className="h-[220px] w-[250px] object-cover rounded-md"
-            />
-            <div>
-              <h3 className="font-semibold">{title}</h3>
-              <div className="flex justify-center items-center gap-1">
-                {Array(5)
-                  .fill()
-                  .map((_, index) => (
-                    <FaSpider key={index} style={{ color: "#800080" }} />
-                  ))}
-              </div>
-            </div>
-          </div>
+        {PRODUCTS.map(({ id, img, title }) => (
+          <ProductCard key={id} img={img} title={title} />
         ))}
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default Products;
