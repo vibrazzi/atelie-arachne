@@ -36,7 +36,7 @@ const ProductCard = ({ img, title }) => (
 );
 
 const Products = () => (
-  <section className="flex justify-center px-2 sm:px-8 bg-gradient-to-br from-[pink] via-white to-[pink]/80 rounded-2xl mx-4 sm:mx-10 mb-10 py-2 sm:py-8">
+  <section className="flex justify-center px-2 sm:px-8 bg-gradient-to-br from-purple-100 via-white to-purple-200 rounded-2xl mx-4 sm:mx-10 mb-10 py-2 sm:py-8">
     <div className="container">
       <div className="text-center max-w-[600px] mx-auto">
         <h1 data-aos="fade-up" className="text-3xl font-bold">

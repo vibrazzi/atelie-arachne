@@ -9,7 +9,7 @@ const features = [
 
 const Banner = () => (
   <section id="banner" className="min-h-[350px] flex justify-center">
-    <div className="container px-2 sm:px-4 bg-gradient-to-br from-red-200 via-white to-pink-100 rounded-2xl shadow-2xl mx-2 sm:mx-4 sm:py-4 w-full animate-fade-in">
+    <div className="container px-2 sm:px-4 bg-gradient-to-br from-purple-100 via-white to-purple-200 rounded-2xl shadow-2xl mx-2 sm:mx-4 sm:py-4 w-full animate-fade-in">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 items-center">
         <div className="flex flex-col justify-center items-center sm:items-start gap-4 text-center sm:text-left mt-8 sm:mt-12">
           <h1

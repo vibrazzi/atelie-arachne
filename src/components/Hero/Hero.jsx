@@ -56,7 +56,7 @@ const HeroSlide = ({ img, title, description }) => (
         <img
           src={img}
           alt={title}
-          className="w-[180px] h-[180px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] object-contain mx-auto rounded-xl border-4 border-red-200 shadow-2xl transition-transform duration-300 hover:scale-105"
+          className="w-[180px] h-[180px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] object-contain mx-auto rounded-xl border-4 border-purple-200 shadow-2xl transition-transform duration-300 hover:scale-105"
         />
       </div>
     </div>
@@ -80,7 +80,7 @@ const Hero = () => {
   return (
     <section className="flex justify-center relative overflow-hidden min-h-[300px] sm:min-h-[400px] text-light duration-200">
       <div className="h-[400px] w-[400px] absolute -top-1/3 right-0 rounded-3xl rotate-45 -z-[8]" />
-      <div className="container px-1 sm:px-4 bg-gradient-to-br from-[#F5F5F5] via-white to-[#F5F5F5]/80 rounded-2xl">
+      <div className="container px-1 sm:px-4 rounded-2xl">
         <Slider {...settings}>
           {SLIDES.map((slide) => (
             <HeroSlide key={slide.id} {...slide} />
