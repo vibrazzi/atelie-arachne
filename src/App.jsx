@@ -23,26 +23,31 @@ const App = () => {
     <div
       className="text-light duration-200"
       style={{
-        backgroundImage: "url('/background-chat.png')",
+        position: "relative",
+        backgroundImage: "url('/bg-blue.png')",
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
-        backgroundColor: "rgba(0, 0, 0, 0.1)",
-      }}
+        backgroundPosition: "center",
+        minHeight: "100vh",
+      }}    
     >
-      <Navbar />
-      <div id="home" className="my-16">
-        <Banner />
+      {/* Gradiente animado no fundo */}
+      <div style={{ position: "relative", zIndex: 1 }}>
+        <Navbar />
+        <div id="home" className="my-16">
+          <Banner />
+        </div>
+        <div id="products" className="my-16">
+          <Hero />
+        </div>
+        <div className="my-16">
+          <Products />
+        </div>
+        <div id="footer">
+          <Footer />
+        </div>
+        <BackToHome />
       </div>
-      <div id="products" className="my-16">
-        <Hero />
-      </div>
-      <div className="my-16">
-        <Products />
-      </div>
-      <div id="footer">
-        <Footer />
-      </div>
-      <BackToHome />
     </div>
   );
 };

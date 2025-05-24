@@ -28,13 +28,15 @@ const SLIDES = [
 ];
 
 const HeroSlide = ({ img, title, description }) => (
-  <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-8 py-6 sm:py-12 bg-white/60 rounded-xl shadow-lg">
-    <div className="flex flex-col justify-center gap-4 sm:gap-8 text-center sm:text-left order-2 sm:order-1 relative z-10">
+  <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-10 py-6 sm:py-12 bg-gradient-to-br from-purple-300 rounded-xl shadow-lg">
+    <div className="flex flex-col justify-center gap-6 sm:gap-10 text-center sm:text-left order-2 sm:order-1 relative z-10 px-6 sm:px-12">
       <h1
         data-aos="zoom-out"
         data-aos-duration="500"
         data-aos-once="true"
-        className="text-3xl sm:text-5xl lg:text-6xl font-bold text-light drop-shadow-lg"
+        className="text-2xl sm:text-3xl mt-6 lg:text-5xl font-bold text-black drop-shadow-lg"
+        tabIndex={0}
+        aria-label={title}
       >
         {title}
       </h1>
@@ -42,7 +44,9 @@ const HeroSlide = ({ img, title, description }) => (
         data-aos="fade-up"
         data-aos-duration="500"
         data-aos-delay="100"
-        className="text-base sm:text-lg text-light"
+        className="text-base sm:text-lg mt-0 text-purple-100 font-normal"
+        tabIndex={0}
+        aria-label={description}
       >
         {description}
       </p>
@@ -78,9 +82,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="flex justify-center relative overflow-hidden min-h-[300px] sm:min-h-[400px] text-light duration-200">
+    <section className="flex justify-center relative overflow-hidden min-h-[300px] sm:min-h-[400px] text-black duration-200">
       <div className="h-[400px] w-[400px] absolute -top-1/3 right-0 rounded-3xl rotate-45 -z-[8]" />
-      <div className="container px-1 sm:px-4 rounded-2xl">
+      <div className="container px-4 sm:px-8 rounded-2xl mx-4 sm:mx-40">
         <Slider {...settings}>
           {SLIDES.map((slide) => (
             <HeroSlide key={slide.id} {...slide} />
