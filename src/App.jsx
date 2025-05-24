@@ -28,7 +28,6 @@ const App = () => {
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
         backgroundPosition: "center",
-        minHeight: "100vh",
       }}    
     >
       {/* Gradiente animado no fundo */}

@@ -35,7 +35,7 @@ const Navbar = () => {
           src={"./spider-web-sf.png"}
           alt="Teia de aranha"
         />
-        <ul className="flex flex-wrap gap-4 text-black text-base font-semibold justify-center w-full" role="menubar">
+        <ul className="flex flex-wrap gap-4 text-purple-950 text-base font-semibold justify-center w-full" role="menubar">
           {Menu.map(({ id, name, link }) => (
             <li key={id} role="none">
               <button

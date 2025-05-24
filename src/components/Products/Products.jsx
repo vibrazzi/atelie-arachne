@@ -7,17 +7,17 @@ import Img4 from "../../assets/hero/collection2.jpg";
 import Img5 from "../../assets/hero/collection.jpg";
 
 const PRODUCTS = [
-  { id: 1, img: Img1, title: "Chaveirinho Ceva" },
-  { id: 2, img: Img2, title: "Chaveirinho Hamburguer" },
-  { id: 3, img: Img3, title: "Chaveirinho Estrela" },
-  { id: 4, img: Img4, title: "Chaveirinho Lua e Estrela" },
-  { id: 5, img: Img5, title: "Chaveirinho Coelhinho" },
+  { id: 1, img: Img1, title: "Ceva" },
+  { id: 2, img: Img2, title: "Hamburguerzinho" },
+  { id: 3, img: Img3, title: "Estrelinha" },
+  { id: 4, img: Img4, title: "Lua e Estrela" },
+  { id: 5, img: Img5, title: "Coelhinho" },
 ];
 
 const ProductCard = ({ img, title }) => (
   <div
     data-aos="fade-up"
-    className="space-y-3 text-center bg-white/80 rounded-lg p-4 shadow-md border-2 border-purple-100 hover:border-purple-400 hover:shadow-xl transition-all duration-300 cursor-pointer"
+    className="space-y-3 text-center bg-purple-100 rounded-lg p-4 shadow-md border-2 border-purple-700 hover:border-purple-950 hover:shadow-xl transition-all duration-300 cursor-pointer"
   >
     <img
       src={img}
@@ -25,7 +25,7 @@ const ProductCard = ({ img, title }) => (
       className="h-[220px] w-[250px] object-cover rounded-md mx-auto"
     />
     <div>
-      <h3 className="font-semibold text-black-900 text-lg">{title}</h3>
+      <h3 className="font-semibold text-purple-950 text-base text-lg">{title}</h3>
       <div className="flex justify-center items-center gap-1">
         {Array.from({ length: 5 }).map((_, idx) => (
           <FaSpider key={idx} style={{ color: "#800080" }} />

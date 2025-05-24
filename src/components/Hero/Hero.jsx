@@ -34,7 +34,7 @@ const HeroSlide = ({ img, title, description }) => (
         data-aos="zoom-out"
         data-aos-duration="500"
         data-aos-once="true"
-        className="text-2xl sm:text-3xl mt-6 lg:text-5xl font-bold text-black drop-shadow-lg"
+        className="text-2xl sm:text-3xl mt-6 lg:text-5xl font-bold text-white drop-shadow-lg"
         tabIndex={0}
         aria-label={title}
       >
@@ -44,7 +44,7 @@ const HeroSlide = ({ img, title, description }) => (
         data-aos="fade-up"
         data-aos-duration="500"
         data-aos-delay="100"
-        className="text-base sm:text-lg mt-0 text-purple-100 font-normal"
+        className="text-center sm:text-lg mt-0 text-purple-950 font-normal"
         tabIndex={0}
         aria-label={description}
       >
@@ -60,7 +60,7 @@ const HeroSlide = ({ img, title, description }) => (
         <img
           src={img}
           alt={title}
-          className="w-[180px] h-[180px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] object-contain mx-auto rounded-xl border-4 border-purple-200 shadow-2xl transition-transform duration-300 hover:scale-105"
+          className="w-[180px] h-[180px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] object-contain mx-auto rounded-xl border-4 border-purple-900 shadow-2xl transition-transform duration-300 hover:scale-105"
         />
       </div>
     </div>
