@@ -28,13 +28,13 @@ const SLIDES = [
 ];
 
 const HeroSlide = ({ img, title, description }) => (
-  <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-10 py-6 sm:py-12 bg-gradient-to-br from-purple-300 rounded-xl shadow-lg">
-    <div className="flex flex-col justify-center gap-6 sm:gap-10 text-center sm:text-left order-2 sm:order-1 relative z-10 px-6 sm:px-12">
+  <div className="flex flex-col sm:flex-row items-center justify-center bg-gradient-to-br from-purple-300 rounded-xl shadow-lg px-4 sm:px-10 py-8 sm:py-12">
+    <div className="flex flex-col justify-center items-center gap-6 text-center w-full sm:w-1/2 px-0 sm:px-6">
       <h1
         data-aos="zoom-out"
         data-aos-duration="500"
         data-aos-once="true"
-        className="text-2xl sm:text-3xl mt-6 lg:text-5xl font-bold text-white drop-shadow-lg"
+        className="text-2xl sm:text-3xl lg:text-5xl font-bold text-purple-950 drop-shadow-lg"
         tabIndex={0}
         aria-label={title}
       >
@@ -44,14 +44,14 @@ const HeroSlide = ({ img, title, description }) => (
         data-aos="fade-up"
         data-aos-duration="500"
         data-aos-delay="100"
-        className="text-center sm:text-lg mt-0 text-purple-950 font-normal"
+        className="text-base sm:text-lg mt-0 text-purple-200 font-normal text-center max-w-xl mx-auto"
         tabIndex={0}
         aria-label={description}
       >
         {description}
       </p>
     </div>
-    <div className="order-1 sm:order-2 flex items-center justify-center">
+    <div className="flex items-center justify-center w-full sm:w-1/2 mt-8 sm:mt-0">
       <div
         data-aos="zoom-in"
         data-aos-once="true"

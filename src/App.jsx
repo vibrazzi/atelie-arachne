@@ -20,18 +20,12 @@ const App = () => {
   }, []);
 
   return (
-    <div
-      className="text-light duration-200"
-      style={{
-        position: "relative",
-        backgroundImage: "url('/bg-blue.png')",
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-        backgroundPosition: "center",
-      }}    
-    >
-      {/* Gradiente animado no fundo */}
-      <div style={{ position: "relative", zIndex: 1 }}>
+    <div className="relative text-light duration-200 bg-cover bg-fixed bg-center" style={{ backgroundImage: "url('/bg-blue.png')" }}>
+      {/* Overlay to darken background */}
+      <div className="absolute inset-0 bg-black opacity-20"></div>
+
+      {/* Content */}
+      <div className="relative z-10">
         <Navbar />
         <div id="home" className="my-16">
           <Banner />

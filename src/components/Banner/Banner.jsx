@@ -2,9 +2,9 @@ import { GrSecure } from "react-icons/gr";
 import { FaBox, FaTruck, FaSpider } from "react-icons/fa";
 
 const features = [
-  { Icon: GrSecure, text: "Qualidade garantida em cada peça" },
-  { Icon: FaBox, text: "Design exclusivo e funcional" },
+  { Icon: FaBox, text: "Design exclusivo" },
   { Icon: FaTruck, text: "Entrega rápida e segura" },
+  { Icon: GrSecure, text: "Qualidade garantida em cada peça" },
 ];
 
 const Banner = () => (
@@ -14,13 +14,12 @@ const Banner = () => (
       <div className="flex flex-col justify-center items-center gap-5 text-center w-full">
         <h1
           data-aos="fade-up"
-          className="text-2xl sm:text-3xl font-bold tracking-wide leading-tight flex items-center gap-3 text-white drop-shadow-lg whitespace-nowrap justify-center w-full"
+          className="text-2xl sm:text-3xl font-bold tracking-wide leading-tight flex items-center gap-3 text-purple-950 drop-shadow-lg whitespace-nowrap justify-center w-full"
         >
           Chaveirinhos de{" "}
-          <span className="font-extrabold bg-gradient-to-r from-purple-400 via-purple-800 to-purple-900 bg-clip-text text-transparent animate-pulse">
+          <span className="font-extrabold bg-gradient-to-r from-purple-950 via-purple-700 to-purple-950 bg-clip-text text-transparent animate-pulse">
             Crochê
           </span>
-          <FaSpider className="text-2xl text-purple-700 animate-spin-slow" />
         </h1>
         <p
           data-aos="fade-up"
@@ -38,7 +37,7 @@ const Banner = () => (
               tabIndex={0}
               aria-label={text}
             >
-              <div className="flex items-center justify-center w-9 h-9 bg-purple-800 rounded-full shadow-md">
+              <div className="flex items-center justify-center w-9 h-9 bg-purple-950 rounded-full shadow-md">
                 <Icon className="text-xl text-white" aria-hidden="true" focusable="false" />
               </div>
               <p className="text-sm sm:text-base font-semibold text-purple-100 text-left">{text}</p>
