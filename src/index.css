@@ -24,3 +24,16 @@
 .animate-bounce {
   animation: bounce 1.2s infinite;
 }
+
+.background-container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/bg-blue.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}

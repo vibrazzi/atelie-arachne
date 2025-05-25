@@ -19,12 +19,12 @@ const PRODUCTS = [
 const ProductCard = ({ img, title }) => (
   <div
     data-aos="fade-up"
-    className="space-y-3 text-center bg-purple-100 rounded-lg p-6 shadow-md border-2 border-purple-700 hover:border-purple-950 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col items-center"
+    className="space-y-3 text-center mt-5 bg-purple-100 rounded-lg p-6 shadow-md border-2 border-purple-700 hover:border-pink-500 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col items-center"
   >
     <img
       src={img}
       alt={title}
-      className="h-[180px] w-[180px] sm:h-[220px] sm:w-[220px] object-cover rounded-md mx-auto"
+      className="h-[180px] w-[180px] sm:h-[220px] sm:w-[220px] object-contain rounded-md mx-auto bg-white"
     />
     <div className="w-full flex flex-col items-center">
       <h3 className="font-semibold text-purple-950 text-lg mb-1">{title}</h3>
@@ -51,10 +51,12 @@ const Products = () => (
           <FaSpider className="inline-block text-3xl text-purple-950 animate-spin-slow ml-2" />
         </h1>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 place-items-center px-2 sm:px-6 py-8 gap-6">
-        {PRODUCTS.map(({ id, img, title }) => (
-          <ProductCard key={id} img={img} title={title} />
-        ))}
+      <div className="w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-2 sm:px-6 py-8 place-items-center">
+          {PRODUCTS.map(({ id, img, title }) => (
+            <ProductCard key={id} img={img} title={title} />
+          ))}
+        </div>
       </div>
     </div>
   </section>
