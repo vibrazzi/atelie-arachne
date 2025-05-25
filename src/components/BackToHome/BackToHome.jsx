@@ -29,11 +29,14 @@ const BackToHome = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-vermelhoSangue text-white p-3 rounded-full shadow-lg hover:bg-purple-950 focus:outline-none focus:ring-2 focus:ring-white transition duration-300 animate-fade-in animate-bounce"
+          className="fixed bottom-6 right-6 bg-purple-950 text-white p-3 rounded-full shadow-2xl hover:scale-110 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-400 transition-all duration-300 animate-fade-in"
           aria-label="Voltar ao Início"
           tabIndex={0}
+          style={{
+            boxShadow: "0 4px 24px 0 rgba(80, 0, 120, 0.4)",
+          }}
         >
-          <FaArrowUp className="text-xl" />
+          <FaArrowUp className="text-2xl drop-shadow-lg" />
         </button>
       )}
     </div>

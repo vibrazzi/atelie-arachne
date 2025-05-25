@@ -25,6 +25,19 @@ module.exports = {
         xl: "3rem",
         "2xl": "4rem",
       },
+      dropShadow: {
+        glow: "0 0 16px #a21caf, 0 0 32px #f472b6",
+      },
+      animation: {
+        'gradient-x': 'gradient-x 3s ease infinite',
+        'spin-slow': 'spin 6s linear infinite',
+      },
+      keyframes: {
+        'gradient-x': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+      },
     },
   },
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
