@@ -9,6 +9,7 @@
 .animate-fade-in {
   animation: fade-in 1s ease;
 }
+
 @keyframes spin-slow {
   0% { transform: rotate(0deg);}
   100% { transform: rotate(360deg);}
@@ -25,9 +26,10 @@
   animation: bounce 1.2s infinite;
 }
 
+/* Correção para fixar o fundo no iPhone */
 .background-container::before {
   content: "";
-  position: fixed;
+  position: absolute; /* Alterado de fixed para absolute */
   top: 0;
   left: 0;
   width: 100vw;
