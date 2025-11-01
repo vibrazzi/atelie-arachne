@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FaArrowUp } from "react-icons/fa";
+import { FaArrowUp, FaSpider } from "react-icons/fa";
+import { GiSpiderWeb } from "react-icons/gi";
 
 const BackToHome = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,17 +28,37 @@ const BackToHome = () => {
   return (
     <div>
       {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-purple-950 text-white p-3 rounded-full shadow-2xl hover:scale-110 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-400 transition-all duration-300 animate-fade-in"
-          aria-label="Voltar ao Início"
-          tabIndex={0}
-          style={{
-            boxShadow: "0 4px 24px 0 rgba(80, 0, 120, 0.4)",
-          }}
-        >
-          <FaArrowUp className="text-2xl drop-shadow-lg" />
-        </button>
+        <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
+          
+          <div className="absolute -inset-4 opacity-30 pointer-events-none">
+            <GiSpiderWeb className="text-6xl text-arachne-neonPurple animate-spin-slower" />
+          </div>
+
+          
+          <button
+            onClick={scrollToTop}
+            className="group relative glass-arachne p-4 rounded-full shadow-card-hover border-2 border-arachne-neonPurple/40 hover:border-arachne-neonPurple hover:scale-110 focus:outline-none focus:ring-4 focus:ring-arachne-neonPurple/50 transition-all duration-300 overflow-hidden"
+            aria-label="Voltar ao Início"
+            tabIndex={0}
+          >
+            
+            <div className="absolute inset-0 bg-gradient-to-br from-arachne-neonPurple/40 to-arachne-royalPurple/40 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            
+            <FaArrowUp className="relative z-10 text-2xl text-arachne-silk group-hover:text-white transition-colors duration-300 drop-shadow-glow-purple group-hover:animate-pulse-glow" />
+
+            
+            <div className="absolute inset-0 bg-gradient-to-br from-arachne-royalPurple to-arachne-neonPurple opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+
+            
+            <div className="absolute inset-0 web-pattern opacity-0 group-hover:opacity-30 transition-opacity duration-300 rounded-full"></div>
+          </button>
+
+          
+          <div className="absolute -top-2 -right-2 opacity-60 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <FaSpider className="text-lg text-arachne-neonPurple animate-float" />
+          </div>
+        </div>
       )}
     </div>
   );
