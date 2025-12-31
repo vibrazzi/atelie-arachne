@@ -10,7 +10,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended", // Melhora acessibilidade
+    "plugin:jsx-a11y/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/react",
@@ -22,16 +22,13 @@ module.exports = {
   },
   settings: {
     react: {
-      version: "detect", // Detecta automaticamente a versão do React
+      version: "detect",
     },
   },
   plugins: ["react-refresh", "jsx-a11y", "import"],
   rules: {
-    // Acessibilidade
-    "jsx-a11y/anchor-is-valid": "warn", // Garante links acessíveis
-    "jsx-a11y/no-autofocus": "warn", // Evita problemas com autofocus
-
-    // Organização de imports
+    "jsx-a11y/anchor-is-valid": "warn",
+    "jsx-a11y/no-autofocus": "warn",
     "import/order": [
       "warn",
       {
@@ -40,19 +37,17 @@ module.exports = {
       },
     ],
 
-    // React
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
     ],
-    "react/react-in-jsx-scope": "off", // Não necessário no React 17+
-    "react/prop-types": "off", // Desabilitado para evitar validação redundante
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
 
-    // Boas práticas
-    "no-unused-vars": ["warn", { vars: "all", args: "none" }], // Evita variáveis não utilizadas
-    "eqeqeq": "error", // Exige uso de === e !==
-    "semi": ["error", "always"], // Exige ponto e vírgula
-    "no-console": "warn", // Alerta para uso de console.log
-    "no-debugger": "error", // Proíbe uso de debugger
+    "no-unused-vars": ["warn", { vars: "all", args: "none" }],
+    "eqeqeq": "error",
+    "semi": ["error", "always"],
+    "no-console": "warn",
+    "no-debugger": "error",
   },
 };

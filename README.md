@@ -80,16 +80,16 @@ O site foi completamente redesenhado com uma identidade visual inspirada em aran
 
 ```javascript
 arachne: {
-  deepPurple: '#1a0033',      // Roxo profundo como noite
-  darkPurple: '#2d004d',       // Roxo escuro principal
-  royalPurple: '#4a0080',      // Roxo real vibrante
-  neonPurple: '#7b2cbf',       // Roxo neon brilhante
-  lightPurple: '#9d4edd',      // Roxo claro para destaques
-  web: '#b8b8d1',              // Cor de teia prateada
-  venom: '#00ff88',            // Verde venenoso neon
-  shadow: '#0f0818',           // Sombra profunda
-  silk: '#e0aaff',             // Seda clara
-  accent: '#ff006e',           // Rosa/magenta de acento
+  deepPurple: '#1a0033',
+  darkPurple: '#2d004d',
+  royalPurple: '#4a0080',
+  neonPurple: '#7b2cbf',
+  lightPurple: '#9d4edd',
+  web: '#b8b8d1',
+  venom: '#00ff88',
+  shadow: '#0f0818',
+  silk: '#e0aaff',
+  accent: '#ff006e',
 }
 ```
 
